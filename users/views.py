@@ -196,6 +196,7 @@ class UsersDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
         else:
             return reverse('users:login')
 
+
 @login_required(login_url='users:login')
 def toggle_status(request, pk):
     if request.user.is_staff:

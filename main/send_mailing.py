@@ -34,7 +34,6 @@ def send_mails():
                 send_email(mailing, mailing_client)
 
 
-
 def send_email(mailing, mailing_client):
     """Функция по отправке сообщений пользователю"""
     file_content = mailing.body
@@ -67,8 +66,6 @@ def send_email(mailing, mailing_client):
             log_mailing=mailing,
             response=e
         )
-
-
 
 
 if __name__ == '__main__':

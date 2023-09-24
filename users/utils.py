@@ -22,5 +22,3 @@ def send_mail(to, theme, message):
     s.sendmail('polinaskypro@yandex.ru', [to], msg.as_string())
 
     s.quit()
-
-
