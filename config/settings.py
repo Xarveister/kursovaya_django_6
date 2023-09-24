@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 import os
+
 from dotenv import load_dotenv
 from pathlib import Path
 
@@ -30,12 +31,14 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'django_crontab',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
     'main',
     'users',
     'blog',
@@ -76,10 +79,10 @@ WSGI_APPLICATION = 'config.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'BAZA',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'bd_1',
         'USER': 'postgres',  # Пользователь для подключения
-        'PASSWORD': os.getenv('DATABASE_PASSWORD'),
+        'PASSWORD': 'Xarvat007',
     }
 }
 
